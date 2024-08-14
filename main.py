@@ -12,16 +12,19 @@ def get_words_dict():
 
     return words
 
+
 def get_board():
     board = input("Enter board letters: ").upper()
     if is_valid_board(board):
         return board
+
 
 def is_valid_board(board):
     if len(board) != 16:
         print("Invalid Input")
         return False
     return True
+
 
 def get_adjacent_cells(index):
     adjacent_cells = []
@@ -101,6 +104,7 @@ def sort_answers(answers):
             output.append(key)
     output = list(set(output))
     return sorted(output, key=len)
+
 
 if __name__ == "__main__":
     words = get_words_dict()
